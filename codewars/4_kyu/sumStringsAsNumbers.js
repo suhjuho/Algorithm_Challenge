@@ -1,12 +1,11 @@
-function add(a, b) {
-  let result = "";
-
+function sumStrings(a, b) {
   const arrA = a.split("").reverse();
   const arrB = b.split("").reverse();
   const length = Math.max(arrA.length, arrB.length);
   let carry = 0;
   let itemA = 0;
   let itemB = 0;
+  let result = "";
 
   for (let i = 0; i < length; i++) {
     if (i < arrA.length) {
@@ -27,6 +26,10 @@ function add(a, b) {
 
   if (carry !== 0) {
     result = carry + result;
+  }
+
+  if (result[0] === "0") {
+    result = result.slice(1);
   }
 
   return result;
