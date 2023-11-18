@@ -31,7 +31,6 @@ function solution(cap, n, deliveries, pickups) {
     }
 
     leftDeliveries -= (cap - load);
-
     load = cap;
 
     if (leftPickups > 0) {
@@ -49,7 +48,6 @@ function solution(cap, n, deliveries, pickups) {
     }
 
     leftPickups -= (cap - load);
-
   }
 
   return answer;
